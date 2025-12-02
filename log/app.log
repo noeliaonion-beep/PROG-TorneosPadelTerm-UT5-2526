@@ -8,3 +8,32 @@
 [2025-12-02 11:45:20] [INFO ] [Main: 12] ARRANCANDO APLICACION MODO WEB
 [2025-12-02 11:45:27] [INFO ] [Login: 19] login
 [2025-12-02 11:45:33] [INFO ] [Login: 36] alias: admin NO AUTH
+[2025-12-02 12:01:21] [INFO ] [Login: 19] login
+[2025-12-02 12:01:33] [INFO ] [Login: 36] alias: admin NO AUTH
+[2025-12-02 12:01:38] [INFO ] [Login: 36] alias: Admin NO AUTH
+[2025-12-02 12:11:53] [INFO ] [Login: 19] login
+[2025-12-02 12:12:02] [INFO ] [Login: 36] alias: admin AUTH
+[2025-12-02 12:20:16] [INFO ] [Login: 19] login
+[2025-12-02 12:20:21] [INFO ] [Login: 36] alias: admin AUTH
+[2025-12-02 12:20:21] [INFO ] [MenuAdmin: 21] menu-admin
+[2025-12-02 12:20:42] [INFO ] [MenuAdminAvanzar: 23] menu-admin-avanzar
+[2025-12-02 12:37:05] [INFO ] [Login: 19] login
+[2025-12-02 12:37:17] [INFO ] [Login: 36] alias: admin AUTH
+[2025-12-02 12:37:17] [INFO ] [MenuAdmin: 21] menu-admin
+[2025-12-02 12:44:34] [INFO ] [Login: 19] login
+[2025-12-02 12:44:38] [INFO ] [Login: 36] alias: admin AUTH
+[2025-12-02 12:44:38] [INFO ] [MenuAdmin: 21] menu-admin
+[2025-12-02 12:55:49] [INFO ] [Login: 19] login
+[2025-12-02 12:58:22] [INFO ] [Login: 19] login
+[2025-12-02 12:58:26] [INFO ] [Login: 36] alias: admin AUTH
+[2025-12-02 12:58:26] [INFO ] [MenuAdmin: 21] menu-admin
+[2025-12-02 13:03:46] [INFO ] [Login: 19] login
+[2025-12-02 13:03:52] [INFO ] [Login: 36] alias: admin AUTH
+[2025-12-02 13:03:52] [INFO ] [MenuAdmin: 21] menu-admin
+[2025-12-02 13:19:12] [INFO ] [Login: 19] login
+[2025-12-02 13:19:17] [INFO ] [Login: 36] alias: admin AUTH
+[2025-12-02 13:19:17] [INFO ] [MenuAdmin: 21] menu-admin
+[2025-12-02 13:19:36] [INFO ] [Login: 19] login
+[2025-12-02 13:19:41] [INFO ] [Login: 36] alias: admin AUTH
+[2025-12-02 13:19:41] [INFO ] [MenuAdmin: 21] menu-admin
+[2025-12-02 13:19:45] [INFO ] [MenuAdminGestionarUsuarios: 21] menu-admin-gestionar-usuarios

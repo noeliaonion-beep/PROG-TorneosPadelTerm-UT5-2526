@@ -12,12 +12,13 @@ public class TorneoDaoMock implements ITorneoDao {
     @Override
     public boolean authenticate(String alias, String password) {
         // TODO 01: Implementar la autenticación de usuario
+        for (int i = 0; i < usuarios.length ; i++) {
+            if (usuarios[i]!=null && usuarios[i].getAlias().equalsIgnoreCase(alias) && usuarios[i].getPassword().equalsIgnoreCase(password)){
+                    return true;
+                }
 
 
-
-
-
-
+        }
 
         return false;
     }
@@ -26,23 +27,24 @@ public class TorneoDaoMock implements ITorneoDao {
     public Usuario getUsuarioByAlias(String alias) {
         // TODO 02: Implementar la búsqueda de usuario por alias
 
-
-
-
-
-
+        for (int i = 0; i <usuarios.length ; i++) {
+                Usuario usuarioaux=usuarios[i];
+                if (usuarioaux!=null && usuarioaux.getAlias().equalsIgnoreCase(alias)){
+                    return usuarioaux;
+            }
+        }
         return null;
     }
 
     @Override
     public Usuario getUsuarioByNombre(String nombre) {
         // TODO 03: Implementar la búsqueda de usuario por nombre
-
-
-
-
-
-
+        for (int i = 0; i <usuarios.length ; i++) {
+            Usuario usuarioaux=usuarios[i];
+            if (usuarioaux!=null && usuarioaux.getNombre().equalsIgnoreCase(nombre)){
+                return usuarioaux;
+            }
+        }
         return null;
     }
 
@@ -52,6 +54,25 @@ public class TorneoDaoMock implements ITorneoDao {
         // Este array no debe tener referencias nulas y su tamaño debe ser el justo
         TorneoFaseDto[] a = new TorneoFaseDto[torneos.length];
         int k = 0;
+        for (int i = 0; i <torneos.length ; i++) {
+            if (torneos[i]!=null) {
+
+                String fase = null;
+
+                for (int j = 0; j < fases.length; j++) {
+
+                    if (fases[j].getId() == torneos[i].getFase()) {
+
+                        fase = fases[j].getNombre();
+
+                    }
+
+                }
+                a[k] = new TorneoFaseDto(torneos[i].getId(), torneos[i].getNombre(), fase);
+                k++;
+
+            }
+        }
 
 
 
@@ -71,12 +92,13 @@ public class TorneoDaoMock implements ITorneoDao {
 
     private String getNombreEquipo(int idEquipo) {
         // TODO 05: Implementar la obtención del nombre del equipo por su id
-
-
-
-
-
-
+        for (int i = 0; i < usuarios.length ; i++) {
+            if (usuarios[i].getRol()==ROL_EQUIPO_ID){
+                if (idEquipo==usuarios[i].getId()){
+                    return usuarios[i].getNombre();
+                }
+            }
+        }
         return "";
     }
 
@@ -84,6 +106,17 @@ public class TorneoDaoMock implements ITorneoDao {
     public Torneo getTorneo(int idTorneo) {
         // TODO 06: Implementar la búsqueda de torneo por id
 
+        for (int i = 0; i <torneos.length ; i++) {
+
+            if (torneos[i] != null){
+
+                if (torneos[i].getId() == idTorneo){
+
+                    return torneos[i];
+                }
+            }
+
+        }
 
 
 
@@ -95,6 +128,18 @@ public class TorneoDaoMock implements ITorneoDao {
     @Override
     public Torneo getTorneo(String nombreTorneo) {
         // TODO 07: Implementar la búsqueda de torneo por nombre
+
+        for (int i = 0; i <torneos.length ; i++) {
+
+            if (torneos[i] != null){
+
+                if (torneos[i].getNombre().equalsIgnoreCase(nombreTorneo)){
+
+                    return torneos[i];
+                }
+            }
+
+        }
 
 
 
@@ -108,14 +153,21 @@ public class TorneoDaoMock implements ITorneoDao {
     public Fase getFase(int idTorneo) {
         // TODO 08: Implementar la obtención de la fase actual de un torneo
 
+        for (int i = 0; i <torneos.length ; i++) {
 
+            if (torneos[i] != null){
 
+                if (torneos[i].getId()==idTorneo){
+                    int fase = torneos[i].getFase();
+                    for (int j = 0; j <fases.length ; j++) {
+                        if (fases[j].getId()==fase){
+                            return fases[j];
+                        }
+                    }
+                }
+            }
 
-
-
-
-
-
+        }
         return null;
     }
 
